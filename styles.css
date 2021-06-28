@@ -74,7 +74,7 @@ form button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   background: inherit;
@@ -153,6 +153,8 @@ select {
   border-radius: 5px;
   background: inherit;
   overflow: hidden;
+  opacity: 0;
+  transform: translateX(200px);
 }
 
 .select::after {
@@ -169,4 +171,13 @@ select {
 .select:hover::after {
   background: white;
   color: #ff6f47;
+}
+
+.title {
+  opacity: 0;
+}
+
+.addListInp {
+  opacity: 0;
+  transform: translateX(-200px);
 }

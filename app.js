@@ -2,11 +2,34 @@ const todoInput = document.querySelector('#inputText');
 const todoBtn = document.querySelector('#buttonSubmit');
 const todoList = document.querySelector('.todo-list');
 const filterOption = document.querySelector('#filter-todo');
+const h1Title = document.querySelector('.title');
+const divInput = document.querySelector('.addListInp');
+const select = document.querySelector('.select');
 
 document.addEventListener('DOMContentLoaded', getTodos);
 todoBtn.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
 filterOption.addEventListener('click', listFilter);
+
+function fadeIn() {
+  h1Title.style.transition = 'all 5s ease';
+  h1Title.style.opacity = 1;
+}
+fadeIn();
+
+function inputAnimation() {
+  divInput.style.transform = 'translateX(0px)';
+  divInput.style.transition = 'all 2s ease';
+  divInput.style.opacity = 1;
+}
+inputAnimation();
+
+function selectMove() {
+  select.style.transform = 'translateX(0px)';
+  select.style.transition = 'all 2s ease';
+  select.style.opacity = 1;
+}
+selectMove();
 
 function addTodo(e) {
   e.preventDefault();
